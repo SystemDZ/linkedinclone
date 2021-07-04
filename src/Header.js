@@ -38,7 +38,7 @@ function Header() {
                 <HeaderOption title="Jobs" Icon={BusinessCenterIcon} />
                 <HeaderOption title="Messaging" Icon={ChatIcon} />
                 <HeaderOption title="Notifications" Icon={NotificationsIcon} />
-                {user && <HeaderOption onClick={logoutOfApp} title={user.displayName} avatar={true} />}
+                {user && <HeaderOption onClick={logoutOfApp} title={user.displayName.split(' ')[0]} avatar={true} />}
             </div>
         </div>
     )

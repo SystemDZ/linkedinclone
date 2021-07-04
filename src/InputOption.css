@@ -10,6 +10,7 @@
 .inputOption:hover {
     background-color: whitesmoke;
     border-radius: 10px;
+    color: black;
 }
 
 .inputOption > h4 {

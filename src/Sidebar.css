@@ -9,6 +9,7 @@
 
 .sidebar__avatar {
     margin-bottom: 10px;
+    border: 2px solid white;
 }
 
 .sidebar__top {
