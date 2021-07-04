@@ -5,8 +5,12 @@
   /* font-size: 99%; */
 }
 
+body {
+  background-color: #000000;
+}
+
 .app {
-  background-color: #f3f2ef;
+  /* background-color: #f3f2ef; theme:white*/
   display: flex;
   flex-direction: column;
   align-items: center;

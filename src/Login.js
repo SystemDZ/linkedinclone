@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 import { auth } from './firebase'
 import { useDispatch } from 'react-redux'
-import {login} from './features/userSlice'
+import { login } from './features/userSlice'
 
 function Login() {
     const [name, setName] = useState('')
@@ -14,7 +14,7 @@ function Login() {
     const loginToApp = (e) => {
         e.preventDefault()
         auth.signInWithEmailAndPassword(email, password)
-            .then(userAuth=>{
+            .then(userAuth => {
                 dispatch(login({
                     email: userAuth.user.email,
                     uid: userAuth.user.uid,
@@ -22,39 +22,39 @@ function Login() {
                     photoURL: userAuth.user.photoURL
                 }))
             })
-            .catch(error=>alert(error))
+            .catch(error => alert(error))
     }
 
     const register = () => {
-        if(!name) return alert("Please enter a full name!");
+        if (!name) return alert("Please enter a full name!");
 
         auth.createUserWithEmailAndPassword(email, password)
-            .then(userAuth=>{
+            .then(userAuth => {
                 userAuth.user.updateProfile({
                     displayName: name,
                     photoURL: profilePic,
                 })
-            .then(()=>{
-                dispatch(login({
-                    email: userAuth.user.email,
-                    uid: userAuth.user.uid,
-                    displayName: name,
-                    photoURL: profilePic
-                }))
+                    .then(() => {
+                        dispatch(login({
+                            email: userAuth.user.email,
+                            uid: userAuth.user.uid,
+                            displayName: name,
+                            photoURL: profilePic
+                        }))
+                    })
+                    .catch(error => alert(error))
             })
-            .catch(error=>alert(error))
-        })
     }
 
     return (
         <div className="login">
-            <img src="https://carers-network.org.uk/wp-content/uploads/2020/05/Linkedin-Logo-2003%E2%80%932011.png" alt="" />
+            <img src="https://i.ibb.co/VWR8mvc/connectinlogo.png" alt="" />
 
             <form>
-                <input value={name} onChange={e=>setName(e.target.value)} type="text" placeholder="Full name (required if registering)" />
-                <input value={profilePic} onChange={e=>setProfilePic(e.target.value)} type="text" placeholder="Profile pic URL (optional)" />
-                <input value={email} onChange={e=>setEmail(e.target.value)} type="email" placeholder="Email" />
-                <input value={password} onChange={e=>setPassword(e.target.value)} type="password" placeholder="Password" />
+                <input value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Full name (required if registering)" />
+                <input value={profilePic} onChange={e => setProfilePic(e.target.value)} type="text" placeholder="Profile pic URL (optional)" />
+                <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email" />
+                <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder="Password" />
                 <button onClick={loginToApp}>Sign In</button>
             </form>
             <p>Not a member? {" "}

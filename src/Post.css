@@ -1,5 +1,8 @@
 .post {
-    background-color: white;
+    /* background-color: white; theme:white */
+    background-color: #030A0C;
+    border: 1px solid #2A2E31;
+    color: white;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 10px;
@@ -17,7 +20,7 @@
 
 .post__info > p{
     font-style: 12px;
-    color: gray;    
+    color: #666571;    
 }
 
 .post__info > h2 {

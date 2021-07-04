@@ -2,15 +2,15 @@
     display: flex;
     align-items: center;
     margin-top: 15px;
-    color: gray;
+    color: #666571;
     padding: 10px;
     cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .inputOption:hover {
-    background-color: whitesmoke;
+    border: 1px solid #666571;
     border-radius: 10px;
-    color: black;
 }
 
 .inputOption > h4 {
