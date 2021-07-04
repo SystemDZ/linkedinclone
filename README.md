@@ -42,3 +42,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Create react app with redux template
+## Make main page, components and their css
+## Connect Firebase
+## Create redux user slice
+## create auth
+## firebase login
+## firebase init
+## Hosting
+# use exiting project
+# choose project
+# type build as single page
+# automatic deploys with github no
+# firebase deploy
